@@ -2,6 +2,8 @@
 
 <configuration>
   <system.webServer>
+    <!-- Disable re-directing for requests to this folder, to make sure IIS sites designed to redirect to other urls will validate as well. -->
+    <httpRedirect enabled="false" />
     <staticContent>
       <mimeMap fileExtension="." mimeType="text/json" />
     </staticContent>
